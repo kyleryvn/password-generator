@@ -4,7 +4,8 @@ import unittest
 
 class MyTestCase(unittest.TestCase):
     def test_generator(self):
-        self.assertEqual(True, True)  # add assertion here
+        password = generate()
+        self.assertEqual(True, password)  # add assertion here
 
 
 if __name__ == '__main__':
