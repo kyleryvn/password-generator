@@ -18,7 +18,7 @@ def generate(length=8):
 
         return "".join(char for char in password_list)
     else:
-        raise ValueError("ERROR: Password length must be a number")
+        raise ValueError("ERROR: Password length must be a number, at least 8 characters in length")
 
 
 if __name__ == '__main__':
