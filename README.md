@@ -3,7 +3,16 @@ Generates a random password of at least 8 characters in length for use in applic
 Generated passwords are a combination of Latin letters, numbers, and symbols.
 
 ## Setup
+To use this package in your project:
+```
+$ pip install [comig soon]
+```
 
+To run this project locally, clone this repository to your machine:
+```
+$ cd ../password-generator
+$ git clone https://github.com/kyleryvn/password-generator
+```
 
 ## Technologies
 Project is created with:
