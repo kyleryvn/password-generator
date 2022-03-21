@@ -25,4 +25,4 @@ def generate(length):
 
 
 if __name__ == '__main__':
-    print(f'Generated password: {generate(1)}')
+    print(f'Generated password: {generate(16)}')
