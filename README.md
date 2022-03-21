@@ -1,2 +1,5 @@
 # Password Generator
-Generates a random, 16 character length password for use in applications
+Generates a random password of at least 8 characters in length for use in applications. 
+Generated passwords are a combination of Latin letters, numbers, and symbols.
+
+## Technologies
