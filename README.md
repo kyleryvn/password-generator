@@ -5,7 +5,7 @@ Generated passwords are a combination of Latin letters, numbers, and symbols.
 ## Setup
 To use this package in your project:
 ```
-$ pip install [comig soon]
+$ pip install [coming soon]
 ```
 
 To run this project locally, clone this repository to your machine:
