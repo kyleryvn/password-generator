@@ -1,7 +1,7 @@
 import random
 
 
-def generate(length=8):
+def generate(length):
     numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     symbols = ['!', '@', '?', '#', '$', '%', '^', '&', '*']
     letters = ['a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F', 'g', 'G', 'h', 'H', 'i', 'I', 'j', 'J',
@@ -9,16 +9,19 @@ def generate(length=8):
                'u', 'U', 'v', 'V', 'w', 'W', 'x', 'X', 'y', 'Y', 'z', 'Z']
 
     if isinstance(length, int):
-        password_list = random.sample(numbers, 10)
-        password_list += random.sample(symbols, len(symbols))
-        password_list += random.sample(letters, len(letters))
+        if length >= 8:
+            password_list = random.sample(numbers, 10)
+            password_list += random.sample(symbols, len(symbols))
+            password_list += random.sample(letters, len(letters))
 
-        random.shuffle(password_list)
-        password_list = random.sample(password_list, length)
+            random.shuffle(password_list)
+            password_list = random.sample(password_list, length)
 
-        return "".join(char for char in password_list)
+            return "".join(char for char in password_list)
+        else:
+            raise ValueError("ERROR: Password must be at least 8 characters in length")
     else:
-        raise ValueError("ERROR: Password length must be a number, at least 8 characters in length")
+        raise ValueError("ERROR: Password length must be a number")
 
 
 if __name__ == '__main__':
