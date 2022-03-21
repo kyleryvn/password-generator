@@ -8,15 +8,21 @@ def generate(length):
                'k', 'K', 'l', 'L', 'm', 'M', 'n', 'N', 'o', 'O', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T',
                'u', 'U', 'v', 'V', 'w', 'W', 'x', 'X', 'y', 'Y', 'z', 'Z']
 
-    password_list = random.sample(numbers, 10)
-    password_list += random.sample(symbols, len(symbols))
-    password_list += random.sample(letters, len(letters))
+    if isinstance(length, int):
+        if length >= 8:
+            password_list = random.sample(numbers, 10)
+            password_list += random.sample(symbols, len(symbols))
+            password_list += random.sample(letters, len(letters))
 
-    random.shuffle(password_list)
-    password_list = random.sample(password_list, length)
+            random.shuffle(password_list)
+            password_list = random.sample(password_list, length)
 
-    return "".join(char for char in password_list)
+            return "".join(char for char in password_list)
+        else:
+            raise ValueError("ERROR: Must be at least 8 characters in length")
+    else:
+        raise ValueError("ERROR: Password length must be a number")
 
 
 if __name__ == '__main__':
-    print(f'Generated password: {generate(16)}')
+    print(f'Generated password: {generate(1)}')
