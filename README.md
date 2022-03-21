@@ -1,6 +1,6 @@
 # Password Generator
 Generates a random password of at least 8 characters in length for use in applications. 
-Generated passwords are a combination of Latin letters, numbers, and symbols.
+Generated passwords are a combination of [Latin](https://en.wikipedia.org/wiki/Latin_script) letters, numbers, and symbols.
 
 ## Setup
 To use this package in your project:
