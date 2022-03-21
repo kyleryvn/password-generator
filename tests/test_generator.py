@@ -8,7 +8,7 @@ class MyTestCase(unittest.TestCase):
         password_two = generate(16)
 
         print(f'First password={password_one}')
-        print(f'First password={password_two}')
+        print(f'Second password={password_two}')
 
         self.assertNotEqual(password_one, password_two)  # should always return a random password
 
